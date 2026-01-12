@@ -10,4 +10,16 @@ def sign(n: int) -> str:
     - "negativo" si n < 0
     - "cero" si n == 0
     """
-    raise NotImplementedError("Implementa sign(n)")
+    if n > 0:
+        print("positivo")
+        return "positivo"
+    elif n < 0:
+        print("negativo")
+        return "negativo"
+    elif n == 0:
+        print("cero")
+        return "cero"
+    raise ValueError ("no válido")
+sign(8)
+sign(-8)
+sign(0)
