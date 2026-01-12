@@ -12,4 +12,16 @@ def factorial(n: int) -> int:
     - Si n < 0, lanza ValueError.
     - Debe resolverse usando un bucle (no recursión).
     """
-    raise NotImplementedError("Implementa factorial(n)")
+    if n < 0:
+        raise ValueError("El factorial no está definido para números negativos.")
+    elif n == 0:
+        print(1)
+        return 1 
+    else:
+        resultado = 1
+        for i in range(1, n + 1):
+            resultado *= i
+        print(resultado)
+        return resultado
+    factorial = factorial(8)
+factorial(8)
